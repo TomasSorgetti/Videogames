@@ -1,0 +1,12 @@
+.footerCont{
+    width: 100%;
+    height: 120px;
+    background-color: #141534;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+h2{
+    color: #fff;
+}

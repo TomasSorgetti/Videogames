@@ -1,0 +1,73 @@
+.formCont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.form{
+    padding: 30px;
+}
+.inputCont{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.formBe{
+    width: 90%;
+    max-width: 400px;
+    height: 100%;
+    position: relative;
+    background-color: #08091D;
+}
+.formBefore::before, .formBefore::after{
+    border-radius: 5px;
+    content: "";
+    position: absolute;
+    left: -2.5px;
+    top: -2.5px;
+    background: linear-gradient(45deg, #e5fb04, #ff6600, #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+.formBefore::after{
+    filter:blur(20px);
+}
+
+
+
+.submitCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.formLabel{
+    color: #fff;
+}
+.formSelect{
+    width: 176px;
+}
+.error{
+    color: red;
+}

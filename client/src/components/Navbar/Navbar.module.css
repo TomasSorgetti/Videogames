@@ -1,0 +1,28 @@
+.navbar{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    text-decoration: none;
+    font-size: 3rem;
+    color: #8B5EFE;
+    font-weight: 700;
+    padding: 10px;
+}
+.searchCont{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: 10px;
+}
+.navLinks{
+    display: flex;
+    gap: 60px;
+}
+.navLink{
+    text-decoration: none;
+    color: #8B5EFE;
+}
+

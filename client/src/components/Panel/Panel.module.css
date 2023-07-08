@@ -1,0 +1,106 @@
+/************* Carrousel / panel *************/
+.carrouselCont{
+    position: relative;
+    margin: 5% auto 5%;
+    width: 80%;
+    height: 470px;
+    background-color: #08091D;
+    border-radius: 55px;
+
+}
+.carrouselBorder::before, .carrouselBorder::after{
+    border-radius: 55px;
+    content: "";
+    position: absolute;
+    left: -2.5px;
+    top: -2.5px;
+    background: linear-gradient(45deg, #e5fb04, #ff6600, #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+.carrouselBorder::after{
+    filter:blur(20px);
+}
+
+/******* Panel *********/
+.panelCont{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+/* 
+.panel1{
+    background-image: url(../../assets/game1.jpg);
+}
+.panel2{
+    background-image: url(../../assets/game2.jpg);
+}
+.panel3{
+    background-image: url(../../assets/game3.jpg);
+}
+.panel4{
+    background-image: url(../../assets/game4.jpg);
+}
+.panel5{
+    background-image: url(../../assets/game5.jpg);
+} */
+
+
+.panel{
+    /* background-size: auto 110%;
+    background-position: center;
+    background-repeat: no-repeat; */
+    height: 450px;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    -webkit-transition: all 700ms ease-in;
+}
+.imgCont{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.panelImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+.panelName{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    margin: 0;
+    opacity: 0;
+}
+.active{
+    flex: 5;
+}
+.panel .active .panelName{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+} 
+.active .panelImg{
+    width: 100%;
+    flex: 5;
+}

@@ -1,0 +1,43 @@
+.detailCont{
+    height: 86.5vh;
+    width: 100%;
+}
+.contData{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.imgCont{
+    height: 86.5vh;
+}
+.gameImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+}
+.contData::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(245, 246, 252, 0.12), rgba(19, 16, 18, 0.93));
+}
+.text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.gameData{
+    color: #fff;
+}
+.description{
+    color: #fff;
+}
